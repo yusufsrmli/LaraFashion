@@ -19,4 +19,14 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('exit',function (){\Illuminate\Support\Facades\Auth::logout();
+return redirect()->route('login');
+})->name('log_out');
+
+Route::group(['prefix'=>'panel','middleware'=>'auth'],function (){
+    Route::get('/',function (){
+        return view('CMS.home');
+    })->name('CMS.home');
+});
+
 Route::get('/home', 'HomeController@index')->name('home');
