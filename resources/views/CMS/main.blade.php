@@ -74,7 +74,7 @@
                             <li><a><i class="fa fa-desktop"></i> News <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="">News List</a></li>
-                                    <li><a href="">News Add</a></li>
+                                    <li><a href="{{route('CMS.news.color')}}">News Color</a></li>
                                 </ul>
                             </li>
 

@@ -27,6 +27,14 @@ Route::group(['prefix'=>'panel','middleware'=>'auth'],function (){
     Route::get('/',function (){
         return view('CMS.home');
     })->name('CMS.home');
+
+    Route::group(['prefix'=>'news'],function (){
+        Route::get('/color', 'CMS\colorsController@createColor')->name('CMS.news.color');
+        Route::post('/create_color','Cms\colorsController@create_color')->name('Cms.news.create_color');
+
+    });
+
 });
+
 
 Route::get('/home', 'HomeController@index')->name('home');
