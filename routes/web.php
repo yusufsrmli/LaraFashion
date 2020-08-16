@@ -28,11 +28,39 @@ Route::group(['prefix'=>'panel','middleware'=>'auth'],function (){
         return view('CMS.home');
     })->name('CMS.home');
 
-    Route::group(['prefix'=>'news'],function (){
-        Route::get('/color', 'CMS\colorsController@createColor')->name('CMS.news.color');
+    Route::group(['prefix'=>'colors'],function (){
+        Route::get('/create', 'Cms\colorsController@index')->name('Cms.news.color');
         Route::post('/create_color','Cms\colorsController@create_color')->name('Cms.news.create_color');
 
     });
+
+    Route::group(['prefix'=>'category'],function (){
+        Route::get('/create', 'Cms\categoryController@index')->name('Cms.news.category');
+        Route::post('/create_category','Cms\categoryController@create_category')->name('Cms.news.create_category');
+    });
+
+    Route::group(['prefix'=>'size'],function (){
+        Route::get('/create','Cms\sizeController@index')->name('Cms.news.size');
+        Route::post('/create_size','Cms\sizeController@create_size')->name('Cms.news.create_size');
+
+    });
+
+    Route::group(['prefix'=>'brand'],function(){
+        Route::get('/create','Cms\brandController@index')->name('Cms.news.brand');
+        Route::post('/brand_create','Cms\brandController@create_brand')->name('Cms.news.create_brand');
+    });
+
+    Route::group(['prefix'=>'contact'],function(){
+        Route::get('/create','Cms\contactController@index')->name('Cms.news.contact');
+        Route::post('/create_contact','Cms\contactController@create_contact')->name('Cms.news.create_contact');
+
+    });
+
+    Route::group(['prefix'=>'product'],function (){
+        Route::get('/create','Cms\productController@index')->name('Cms.news.product');
+        Route::post('/product_create' , 'Cms\productController@create_product')->name('Cms.news.create_product');
+    });
+
 
 });
 

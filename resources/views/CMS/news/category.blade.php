@@ -3,7 +3,7 @@
     <div class="">
         <div class="page-title">
             <div class="title_left">
-                <h3>Color <small>Add</small></h3>
+                <h3>Category <small>Add</small></h3>
             </div>
         </div>
 
@@ -22,12 +22,12 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                     <div class="x_content">
-                        <form class="form-horizontal form-label-left" action="{{route('Cms.news.create_color')}}" method="post" enctype="multipart/form-data">
+                        <form class="form-horizontal form-label-left" action="{{route('Cms.news.create_category')}}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
-                                <h2>Color Name</h2>
+                                <h2>Category Name</h2>
                                 <div class="col-sm-12">
-                                    <input id="color" name="color" type="text" class="form-control" placeholder="Color Name">
+                                    <input id="category" name="category" type="text" class="form-control" placeholder="Category Name">
                                 </div>
                             </div>
 

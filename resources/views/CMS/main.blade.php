@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
@@ -25,6 +25,11 @@
     <link href="{{asset('CMS/vendors/bootstrap-daterangepicker/daterangepicker.css')}}" rel="stylesheet">
     <!-- Custom Theme Style -->
     <link href="{{asset('CMS/build/css/custom.min.css')}}" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <!-- select2 -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+
     <!-- Summernote Editor -->
     @yield('styles')
 </head>
@@ -53,7 +58,7 @@
                     <div class="menu_section">
                         <ul class="nav side-menu">
                             <li>
-                                <a href=""><i class="fa fa-home"></i>Home</a>
+                                <a href="{{route('CMS.home')}}"><i class="fa fa-home"></i>Home</a>
                             </li>
                             <li><a><i class="fa fa-edit"></i> Menu <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
@@ -73,9 +78,16 @@
                             </li>
                             <li><a><i class="fa fa-desktop"></i> News <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="">News List</a></li>
-                                    <li><a href="{{route('CMS.news.color')}}">News Color</a></li>
+                                    <li><a href="{{route('Cms.news.product')}}">News Product</a></li>
+                                    <li><a href="{{route('Cms.news.color')}}">News Color</a></li>
+                                    <li><a href="{{route('Cms.news.category')}}">News Category</a></li>
+                                    <li><a href="{{route('Cms.news.size')}}">News Size</a></li>
+                                    <li><a href="{{route('Cms.news.brand')}}">News Brand</a></li>
+                                    <li><a href="{{route('Cms.news.contact')}}">News Contact</a></li>
+
                                 </ul>
+
+
                             </li>
 
 
@@ -181,6 +193,8 @@
 <script src="{{asset('CMS/vendors/bootstrap-daterangepicker/daterangepicker.js')}}"></script>
 <!-- Custom Theme Scripts -->
 <script src="{{asset('CMS/build/js/custom.min.js')}}"></script>
+<!-- select2 -->
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
 <!-- Summernote Editor -->
 @yield('scripts')
 </body>

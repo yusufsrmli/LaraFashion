@@ -9,16 +9,20 @@ use Illuminate\Http\Request;
 class colorsController extends Controller
 {
 
-    public function createColor(){
+    public function index(){
         return view('CMS.news.color');
 
     }
     public function create_color(Request $request){
+        $request->validate([
+            'color' => 'required'
+        ]);
+
         $colors = new Colors();
         $colors->color=$request->input('color');
 
         $colors->save();
-        return redirect()->route('CMS.news.color');
+        return redirect()->route('Cms.news.color');
     }
 
 }
