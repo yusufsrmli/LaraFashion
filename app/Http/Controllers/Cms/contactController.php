@@ -3,12 +3,18 @@
 namespace App\Http\Controllers\Cms;
 
 use App\Http\Controllers\Controller;
-use App\Models\Category;
 use App\Models\Contact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\View;
 
 class contactController extends Controller
 {
+    public function list(){
+
+        $contacts = Contact::all();
+        View::share('contacts',$contacts);
+        return view('CMS.lists.contactlist');
+    }
     public function index(){
         return view('CMS.news.contact');
 

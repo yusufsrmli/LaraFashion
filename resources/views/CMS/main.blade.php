@@ -25,8 +25,7 @@
     <link href="{{asset('CMS/vendors/bootstrap-daterangepicker/daterangepicker.css')}}" rel="stylesheet">
     <!-- Custom Theme Style -->
     <link href="{{asset('CMS/build/css/custom.min.css')}}" rel="stylesheet">
-    <!-- Material Design Bootstrap -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+
     <!-- select2 -->
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
 
@@ -60,22 +59,7 @@
                             <li>
                                 <a href="{{route('CMS.home')}}"><i class="fa fa-home"></i>Home</a>
                             </li>
-                            <li><a><i class="fa fa-edit"></i> Menu <span class="fa fa-chevron-down"></span></a>
-                                <ul class="nav child_menu">
-                                    <li><a href="">Menu List</a></li>
-                                    <li><a>Add Menu <span class="fa fa-chevron-down"></span></a>
-                                        <ul class="nav child_menu">
-                                            <li class="sub_menu">
-                                                <a href="">Menu</a>
-                                            </li>
-                                            <li>
-                                                <a href="">Submenu</a>
-                                            </li>
-                                        </ul>
 
-                                    </li>
-                                </ul>
-                            </li>
                             <li><a><i class="fa fa-desktop"></i> News <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="{{route('Cms.news.product')}}">News Product</a></li>
@@ -90,7 +74,18 @@
 
                             </li>
 
+                            <li><a><i class="fa fa-edit"></i> Lists <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="{{route('Cms.list.product')}}">Product List</a></li>
+                                    <li><a href="{{route('Cms.list.brand')}}">Brand List</a></li>
+                                    <li><a href="{{route('Cms.list.category')}}">Category List</a></li>
+                                    <li><a href="{{route('Cms.list.size')}}">Size List</a></li>
+                                    <li><a href="{{route('Cms.list.color')}}">Color List</a></li>
+                                    <li><a href="{{route('Cms.list.contact')}}">Contact List</a></li>
 
+
+                                </ul>
+                            </li>
 
                         </ul>
                     </div>

@@ -6,9 +6,16 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Colors;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\View;
 
 class categoryController extends Controller
 {
+    public function list(){
+        $categories = Category::all();
+        View::share('categories',$categories);
+
+        return view('CMS.lists.categoryList');
+    }
     public function index(){
         return view('CMS.news.category');
 

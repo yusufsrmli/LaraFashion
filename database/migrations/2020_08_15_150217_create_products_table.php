@@ -20,6 +20,7 @@ class CreateProductsTable extends Migration
             $table->bigInteger('brand_id');
             $table->bigInteger('category_id');
             $table->bigInteger('size_id');
+            $table->bigInteger('product_price');
             $table->timestamps();
             $table->softDeletes();
         });

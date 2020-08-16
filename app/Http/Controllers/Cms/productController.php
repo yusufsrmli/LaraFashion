@@ -14,7 +14,6 @@ use Illuminate\Support\Facades\View;
 
 class productController extends Controller
 {
-
     public function index()
     {
         $sizes = Size::all();
@@ -26,8 +25,17 @@ class productController extends Controller
         $brands = Brand::all();
         View::share('brands',$brands);
 
+
         return view('Cms.news.product');
     }
+
+    public function list(){
+        $products = Product::all();
+        View::share('products',$products);
+
+        return view('CMS.lists.productList');
+    }
+
 
     public function create_product(Request $request)
     {
@@ -38,6 +46,7 @@ class productController extends Controller
             'colors.*' => 'required|distinct',
             'category_id' => 'required' ,
             'size_id' => 'required' ,
+            'product_price'=>'required',
         ]);
 
         $product = new Product();
@@ -56,10 +65,12 @@ class productController extends Controller
             $colorProduct = new color_product();
             $colorProduct->color_id =$color;
             $colorProduct->product_id =$product->id;
+
             $colorProduct->save();
         }
 
         return redirect()->route('Cms.news.product');
 
     }
+
 }

@@ -1,11 +1,10 @@
 @extends('CMS.main')
 @section('content')
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+
+
 
     <div class="">
         <div class="page-title">
@@ -44,6 +43,7 @@
                                 </div>
                             </div>
                             <br>
+
                             <div class="form-group">
 
                                         Choose a brand:
@@ -91,10 +91,17 @@
                                         @endforeach
                                     </select>
                                 </div>
-                                    <br>
-
-
+                            <br>
                             <div class="form-group">
+                                <h2>Product Price</h2>
+                                <div class="col-sm-12">
+                                    <input id="product_price" name="product_price" type="text" class="form-control" placeholder="Producrt Price">
+                                </div>
+
+                            </div>
+                            <br>
+
+                                <div class="form-group">
                                 <div class="col-sm-12">
                                     <button type="submit" class="btn btn-success">Save</button>
                                 </div>

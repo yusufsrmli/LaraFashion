@@ -11,8 +11,16 @@ use Illuminate\Support\Facades\View;
 class brandController extends Controller
 {
 
+    Public function list(){
+        $brands = Brand::all();
+        View::share('brands',$brands);
+
+    return view('CMS.lists.brandList');
+    }
+
     public function index(){
-        return view('Cms.news.brand');
+
+        return view('CMS.news.brand');
 
 
     }

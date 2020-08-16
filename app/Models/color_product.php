@@ -20,4 +20,9 @@ class color_product extends Model
      * @var mixed
      */
 
+    public function color()
+    {
+        return $this -> belongsTo(Colors::class,'color_id');
+    }
+
 }
