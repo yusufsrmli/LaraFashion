@@ -27,7 +27,7 @@
                             <div class="form-group">
                                 <h2>Brand Name</h2>
                                 <div class="col-sm-12">
-                                    <input id="brand" name="brand" type="text" class="form-control" placeholder="Brand Name">
+                                    <input id="brand" name="name" type="text" class="form-control" placeholder="Brand Name">
                                 </div>
                             </div>
 

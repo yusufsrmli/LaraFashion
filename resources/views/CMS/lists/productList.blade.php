@@ -34,29 +34,29 @@
                                 <tr>
                                     <td style="width: 5%">{{$i}}</td>
                                     <td style="width: 40%">
-                                        <a>{{$product->product_name}}</a>
+                                        <a>{{$product->name}}</a>
                                     </td>
 
                                     <td style="width: 10%">
-                                        <small>{{$product-> brand -> brand}}</small>
+                                        <small>{{$product-> brand['name']}}</small>
                                     </td>
                                     <td style="width: 10%">
                                         @foreach( $product -> colors as $key_value => $color)
-                                        <small> {{$color -> color -> color }}</small>
+                                        <small> {{$color -> color['name'] }}</small>
                                         @endforeach
                                     </td>
                                     <td style="width: 10%">
-                                        <small>{{$product-> category -> category}}</small>
+                                        <small>{{$product-> category['name']}}</small>
                                     </td>
                                     <td style="width: 10%">
-                                        <small>{{$product-> size -> size}}</small>
+                                        <small>{{$product-> size['name']}}</small>
                                     </td>
                                     <td style="width: 10%">
-                                        <small>{{$product-> product_price}}</small>
+                                        <small>{{$product-> price}}</small>
                                     </td>
                                     <td style="width: 15%">
-                                        <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                                        <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                                        <a href="{{route('Cms.edits.product',$product->id)}}" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
+                                        <a href="{{route('Cms.edits.delete_product',$product->id)}}" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
                                     </td>
                                 </tr>
                                 @php $i=$i+1; @endphp

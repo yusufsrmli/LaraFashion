@@ -27,7 +27,7 @@
                             <div class="form-group">
                                 <h2>Category Name</h2>
                                 <div class="col-sm-12">
-                                    <input id="category" name="category" type="text" class="form-control" placeholder="Category Name">
+                                    <input id="category" name="name" type="text" class="form-control" placeholder="Category Name">
                                 </div>
                             </div>
 

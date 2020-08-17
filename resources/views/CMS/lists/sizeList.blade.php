@@ -31,7 +31,7 @@
                                 <tr>
                                     <td style="width: 5%">{{$i}}</td>
                                     <td style="width: 40%">
-                                        <a>{{$size->size}}</a>
+                                        <a>{{$size->name}}</a>
                                     </td>
                                     <td style="width: 10%">
                                         <small>{{$size->created_at}}</small>
@@ -40,8 +40,8 @@
                                         <small>{{$size->updated_at}}</small>
                                     </td>
                                     <td style="width: 15%">
-                                        <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                                        <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                                        <a href="{{route('Cms.edits.size',$size->id)}}" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
+                                        <a href="{{route('Cms.edits.delete_size',$size->id)}}" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
                                     </td>
                                 </tr>
                                 @php $i=$i+1; @endphp

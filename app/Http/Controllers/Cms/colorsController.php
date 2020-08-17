@@ -23,14 +23,37 @@ class colorsController extends Controller
     }
     public function create_color(Request $request){
         $request->validate([
-            'color' => 'required'
+            'name' => 'required'
         ]);
 
         $colors = new Colors();
-        $colors->color=$request->input('color');
+        $colors->fill($request->all());
 
         $colors->save();
         return redirect()->route('Cms.news.color');
     }
+    public function edit($id){
+        $color = Colors::find($id);
+        View::share('color',$color);
+        return view('CMS.edits.colorEdit');
+    }
+
+    public function edit_color($id, Request $request){
+        $request->validate([
+            'name' => 'required'
+        ]);
+        $color= Colors::find($id);
+        $color->fill($request->all());
+        $color->save();
+
+        return redirect()->route('Cms.list.color');
+
+    }
+     public function remove($id){
+        $color = Colors::find($id);
+        $color->delete();
+
+        return redirect()->route('Cms.list.color');
+     }
 
 }

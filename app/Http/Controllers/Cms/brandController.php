@@ -27,13 +27,40 @@ class brandController extends Controller
     public function create_brand(Request $request){
 
         $request->validate([
-            'brand' => 'required'
+            'name' => 'required'
         ]);
 
         $brand = new Brand();
-        $brand->brand=$request->input('brand');
+        $brand->name=$request->input('name');
 
         $brand->save();
         return redirect()->route('Cms.news.brand');
     }
+
+
+
+    public function edit($id){
+        $brand = Brand::find($id);
+        View::share('brand',$brand);
+        return view('CMS.edits.brandEdit');
+    }
+
+    public function edit_brand($id, Request $request){
+        $request->validate([
+            'name' => 'required'
+        ]);
+        $brand = Brand::find($id);
+        $brand->fill($request->all());
+        $brand->save();
+
+        return redirect()->route('Cms.list.brand');
+
+    }
+
+    public function remove($id){
+        $brand = Brand::find($id);
+        $brand->delete();
+        return redirect()->route('Cms.list.brand');
+    }
+
 }

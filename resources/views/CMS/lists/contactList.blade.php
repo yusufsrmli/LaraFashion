@@ -40,8 +40,8 @@
                                         <small>{{$contact->updated_at}}</small>
                                     </td>
                                     <td style="width: 15%">
-                                        <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                                        <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                                        <a href="{{route('Cms.edits.contact',$contact->id)}}" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
+                                        <a href="{{route('Cms.edits.delete_contact',$contact->id)}}" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
                                     </td>
                                 </tr>
                                 @php $i=$i+1; @endphp

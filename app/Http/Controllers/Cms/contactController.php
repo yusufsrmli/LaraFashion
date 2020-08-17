@@ -28,10 +28,34 @@ class contactController extends Controller
         ]);
 
         $contact = new Contact();
-        $contact->contactname=$request->input('contactname');
-        $contact->contact=$request->input('contact');
-        $contact->number=$request->input('number');
+       $contact->fill($request->all());
         $contact->save();
         return redirect()->route('Cms.news.contact');
+    }
+
+    public function edit($id){
+        $contact = Contact::find($id);
+        View::share('contact',$contact);
+        return view('CMS.edits.contactEdit');
+    }
+
+    public function edit_contact($id, Request $request){
+        $request->validate([
+            'contactname' => 'required|max:100',
+            'contact' => 'required',
+            'number' => 'required'
+        ]);
+        $contact= Contact::find($id);
+        $contact->fill($request->all());
+        $contact->save();
+
+        return redirect()->route('Cms.list.contact');
+
+    }
+    public function remove($id){
+        $contact = Contact::find($id);
+        $contact->delete();
+        return redirect()->route('Cms.list.contact');
+
     }
 }

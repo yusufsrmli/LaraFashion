@@ -14,11 +14,12 @@ class Product extends Model
 
     protected $fillable = [
         'image',
-        'product_name',
+        'name',
+
         'brand_id',
         'category_id',
         'size_id',
-        'product_price',
+        'price',
     ];
 
 //    public function producttypeidrelation()

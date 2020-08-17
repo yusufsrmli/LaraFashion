@@ -3,9 +3,6 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-
-
     <div class="">
         <div class="page-title">
             <div class="title_left">
@@ -28,8 +25,12 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                     <div class="x_content">
-                        <form class="form-horizontal form-label-left" action="{{route('Cms.news.create_product')}}" method="post" enctype="multipart/form-data">
+                        <form class="form-horizontal form-label-left" action="{{route('Cms.edits.edit_product',$product->id)}}" method="post" enctype="multipart/form-data">
                             @csrf
+                            <div class="form-group">
+                                <img style="width: 50%;" src="{{asset('images/news/' . \App\Models\Product::find($product->id)->image)}}" alt="image">
+
+                            </div>
                             <div class="form-group">
                                 <h2> Product Image</h2>
                                 <div class="col-sm-12">
@@ -39,58 +40,58 @@
                             <div class="form-group">
                                 <h2>Product Name</h2>
                                 <div class="col-sm-12">
-                                    <input id="name" name="name" type="text" class="form-control" placeholder="Producrt Name">
+                                    <input id="name" name="name" type="text" class="form-control" placeholder="{{$product->name}}">
                                 </div>
                             </div>
                             <br>
 
                             <div class="form-group">
 
-                                        Choose a brand:
-                                        <select name="brand_id" id="brand_id" class="form-control form-control-lg" >
-                                            @foreach($brands as $brand)
-                                            <option value="{{$brand -> id}}">{{$brand->name}}</option>
-                                            @endforeach
-                                        </select>
-                                        <br>
+                                Choose a brand:
+                                <select name="brand_id" id="brand_id" class="form-control form-control-lg" >
+                                    @foreach($brands as $brand)
+                                        <option value="{{$brand -> id}}">{{$brand->name}}</option>
+                                    @endforeach
+                                </select>
+                                <br>
                             </div>
                             <div class="form-group">
-                                    Chose a color:
+                                Chose a color:
                                 <select name="colors[]" id="colors"  multiple="multiple" class="form-control form-control-lg" >
-                                        @foreach($colors as $color)
-                                            <option value="{{$color -> id}}">{{$color->name}}</option>
-                                        @endforeach
-                                    </select>
+                                    @foreach($colors as $color)
+                                        <option value="{{$color -> id}}">{{$color->name}}</option>
+                                    @endforeach
+                                </select>
                             </div>
 
-                                <script>
-                                    $(document).ready(function () {
-                                        $("#colors").select2({
-                                            maximumSelectionLength: 2
-                                        });
+                            <script>
+                                $(document).ready(function () {
+                                    $("#colors").select2({
+                                        maximumSelectionLength: 2
                                     });
-                                </script>
+                                });
+                            </script>
 
                             <div class="form-group">
-                                   Choose a category:
-                                    <select name="category_id" id="category_id" class="form-control form-control-lg">
-                                        @foreach($categories as $category)
-                                            <option value="{{$category -> id}}">{{$category -> name}}</option>
-                                        @endforeach
-                                    </select>
+                                Choose a category:
+                                <select name="category_id" id="category_id" class="form-control form-control-lg">
+                                    @foreach($categories as $category)
+                                        <option value="{{$category -> id}}">{{$category -> name}}</option>
+                                    @endforeach
+                                </select>
                             </div>
-                                    <br>
+                            <br>
 
-                                <div class="form-group">
+                            <div class="form-group">
 
-                                    Choose a size:
-                                    <select name="size_id" id="size_id" class="form-control form-control-lg">
+                                Choose a size:
+                                <select name="size_id" id="size_id" class="form-control form-control-lg">
 
-                                        @foreach($sizes as $size)
-                                            <option value="{{$size -> id}}">{{$size->name}}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
+                                    @foreach($sizes as $size)
+                                        <option value="{{$size -> id}}">{{$size->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
                             <br>
                             <div class="form-group">
                                 <h2>Product Price</h2>
@@ -101,7 +102,7 @@
                             </div>
                             <br>
 
-                                <div class="form-group">
+                            <div class="form-group">
                                 <div class="col-sm-12">
                                     <button type="submit" class="btn btn-success">Save</button>
                                 </div>

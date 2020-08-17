@@ -27,7 +27,7 @@
                             <div class="form-group">
                                 <h2>Color Name</h2>
                                 <div class="col-sm-12">
-                                    <input id="color" name="color" type="text" class="form-control" placeholder="Color Name">
+                                    <input id="color" name="name" type="text" class="form-control" placeholder="Color Name">
                                 </div>
                             </div>
 

@@ -11,6 +11,6 @@ class Size extends Model
     public $timestamps = true;
 
     protected $fillable = [
-        'size',
+        'name',
     ];
 }

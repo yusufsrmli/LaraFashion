@@ -11,6 +11,6 @@ class Brand extends Model
     public $timestamps = true;
 
     protected $fillable = [
-        'brand',
+        'name',
     ];
 }

@@ -31,7 +31,7 @@
                                 <tr>
                                     <td style="width: 5%">{{$i}}</td>
                                     <td style="width: 40%">
-                                        <a>{{$color->color}}</a>
+                                        <a>{{$color->name}}</a>
                                     </td>
                                     <td style="width: 10%">
                                         <small>{{$color->created_at}}</small>
@@ -40,8 +40,8 @@
                                         <small>{{$color->updated_at}}</small>
                                     </td>
                                     <td style="width: 15%">
-                                        <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                                        <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                                        <a href="{{route('Cms.edits.color',$color->id)}}" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
+                                        <a href="{{route('Cms.edits.delete_color',$color->id)}}" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
                                     </td>
                                 </tr>
                                 @php $i=$i+1; @endphp
