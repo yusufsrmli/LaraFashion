@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'Front\indexController@index')->name('Front.index');
 Route::get('/archive/{id}', 'Front\indexController@archive')->name('Front.index.archive');
 Route::get('/shop','Front\shopController@index')->name('Front.shop');
+Route::post('/search','Front\searchController@search')->name('Front.search');
+
 
 Auth::routes();
 

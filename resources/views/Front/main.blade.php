@@ -65,8 +65,9 @@
                 <div class="col-lg-7 col-lg-7">
                     <div class="advanced-search">
                         <button type="button" class="category-btn">All Categories</button>
-                        <form action="#" class="input-group">
-                            <input type="text" placeholder="What do you need?">
+                        <form action="{{route('Front.search')}}" method="post" class="input-group">
+                            @csrf
+                            <input type="text" name="search" placeholder="What do you need?">
                             <button type="button"><i class="ti-search"></i></button>
                         </form>
                     </div>
