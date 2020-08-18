@@ -22,16 +22,6 @@ class Product extends Model
         'price',
     ];
 
-//    public function producttypeidrelation()
-//    {
-//        return $this->belongsTo(producttypeCategory::class, 'producttypeid');
-//    }
-//
-//    public function sizeidrelation()
-//    {
-//        return $this->belongsTo(sizeCategory::class, 'sizeid');
-//    }
-
     public function brand()
     {
         return $this -> belongsTo(Brand::class , 'brand_id');
