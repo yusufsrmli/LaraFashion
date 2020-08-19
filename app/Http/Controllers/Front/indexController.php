@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\View;
 
 class indexController extends Controller
 {
+
     public function index(){
 
         $products = Product::all();

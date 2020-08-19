@@ -57,7 +57,7 @@
                     <div class="menu_section">
                         <ul class="nav side-menu">
                             <li>
-                                <a href="{{route('CMS.home')}}"><i class="fa fa-home"></i>Home</a>
+                                <a href="{{route('Cms.home')}}"><i class="fa fa-home"></i>Home</a>
                             </li>
 
                             <li><a><i class="fa fa-desktop"></i> News <span class="fa fa-chevron-down"></span></a>

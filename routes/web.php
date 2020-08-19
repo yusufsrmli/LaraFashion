@@ -14,22 +14,33 @@ use Illuminate\Support\Facades\Route;
 */
 
 
+
+
+
+Auth::routes();
 Route::get('/', 'Front\indexController@index')->name('Front.index');
 Route::get('/archive/{id}', 'Front\indexController@archive')->name('Front.index.archive');
 Route::get('/shop','Front\shopController@index')->name('Front.shop');
 Route::post('/search','Front\searchController@search')->name('Front.search');
 
+Route::group(['prefix'=>'shoppingcart'],function (){
+   Route::get('/view','Front\shoppingcartController@index')->name('Front.shoppingcart');
+   Route::get('/add/{id}','Front\shoppingcartController@add')->name('Front.add_shoppingcart');
 
-Auth::routes();
+
+});
 
 Route::get('exit',function (){\Illuminate\Support\Facades\Auth::logout();
 return redirect()->route('login');
 })->name('log_out');
 
-Route::group(['prefix'=>'panel','middleware'=>'auth'],function (){
+/*Route::group(['prefix'=>'panel','middleware'=>'auth'],function (){
     Route::get('/',function (){
         return view('CMS.home');
     })->name('CMS.home');
+});*/
+
+Route::get('/panel','Auth\adminController@index')->name('Cms.home');
 
     Route::group(['prefix'=>'colors'],function (){
         Route::get('/create', 'Cms\colorsController@index')->name('Cms.news.color');
@@ -89,7 +100,7 @@ Route::group(['prefix'=>'panel','middleware'=>'auth'],function (){
     });
 
 
-});
 
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+/*Route::get('/home', 'HomeController@index')->name('home');*/

@@ -43,7 +43,17 @@
                                 </div>
                             </div>
                             <br>
+                            <div class="form-group">
 
+                                Choose a gender:
+                                <select name="gender" id="gender" class="form-control form-control-lg" >
+
+                                        <option value="men">men</option>
+                                        <option value="women">women</option>
+
+                                </select>
+                                <br>
+                            </div>
                             <div class="form-group">
 
                                         Choose a brand:

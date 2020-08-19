@@ -75,7 +75,7 @@
                 <div class="col-lg-3 text-right col-lg-3">
                     <ul class="nav-right">
 
-                        <li class="cart-icon"><a href="#">
+                        <li class="cart-icon"><a href="{{route('Front.shoppingcart')}}">
                                 <i class="fa fa-shopping-bag"></i>
                                 <span>3</span>
                             </a>

@@ -74,7 +74,9 @@
 
                     </div>
                     <div class="product-slider owl-carousel">
+
                         @foreach($products as $product)
+                            @if ($product->gender === 'women')
                         <div class="product-item">
                             <div class="pi-pic">
                                 <img src="{{asset('images/news/' . \App\Models\Product::find($product->id)->image)}}" alt="" style="height: 200px">
@@ -97,7 +99,9 @@
                                 </div>
                             </div>
                         </div>
+                            @endif
                         @endforeach
+
 
                     </div>
                 </div>
@@ -118,13 +122,14 @@
                     </div>
                     <div class="product-slider owl-carousel">
                         @foreach($products as $product)
+                            @if ($product->gender === 'men')
                             <div class="product-item">
                                 <div class="pi-pic">
                                     <img src="{{asset('images/news/' . \App\Models\Product::find($product->id)->image)}}" alt="" style="height: 200px">
 
 
                                     <ul>
-                                        <li class="w-icon active"><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
+                                        <li class="w-icon active"><a href="{{route('Front.add_shoppingcart',$product->id)}}"><i class="fa fa-shopping-bag"></i></a></li>
                                         <li class="quick-view"><a href="{{route('Front.index.archive',$product->id)}}"> Quick View</a></li>
 
                                     </ul>
@@ -140,6 +145,7 @@
                                     </div>
                                 </div>
                             </div>
+                            @endif
                         @endforeach
 
                     </div>

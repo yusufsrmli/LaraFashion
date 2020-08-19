@@ -17,7 +17,7 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->text('image');
             $table->text('name');
-
+            $table->text('gender');
             $table->bigInteger('brand_id');
             $table->bigInteger('category_id');
             $table->bigInteger('size_id');
