@@ -19,9 +19,13 @@ class userTableSeeder extends Seeder
                'name'=> $faker->name,
                'email'=> $faker->email(5),
                'password' => bcrypt('password'),
-
             ]);
-
         }
+        DB::table('users')->insert([
+           'name' => 'admin',
+           'email' => 'admin@gmail.com',
+           'password' => bcrypt('12345678'),
+           'role' => 'admin'
+        ]);
     }
 }

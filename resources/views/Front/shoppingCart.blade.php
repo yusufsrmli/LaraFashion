@@ -18,13 +18,13 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($products as $product)
+
                         <tr>
-                            <td class="cart-pic first-row"><img src="{{asset('images/news/' . \App\Models\Product::find($product->id)->image)}}" alt=""></td>
+                            <td class="cart-pic first-row"><img src="#" alt=""></td>
                             <td class="cart-title first-row">
-                                <h5>{{$product->name}}</h5>
+                                <h5>#</h5>
                             </td>
-                            <td class="p-price first-row" id="price">${{$product->price}}</td>
+                            <td class="p-price first-row" id="price">$}</td>
                             <td class="qua-col first-row">
                                 <div class="quantity">
                                     <div class="pro-qty">
@@ -43,7 +43,7 @@
                             <td class="total-price first-row" id="result">$</td>
                             <td class="close-td first-row"><i class="ti-close"></i></td>
                         </tr>
-                        @endforeach
+
 
                         </tbody>
                     </table>

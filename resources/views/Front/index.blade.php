@@ -77,28 +77,28 @@
 
                         @foreach($products as $product)
                             @if ($product->gender === 'women')
-                        <div class="product-item">
-                            <div class="pi-pic">
-                                <img src="{{asset('images/news/' . \App\Models\Product::find($product->id)->image)}}" alt="" style="height: 200px">
+                                <div class="product-item">
+                                    <div class="pi-pic">
+                                        <img src="{{asset('images/news/' . \App\Models\Product::find($product->id)->image)}}" alt="" style="height: 200px">
 
 
-                                <ul>
-                                    <li class="w-icon active"><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
-                                    <li class="quick-view"><a href="{{route('Front.index.archive',$product->id)}}"> Quick View</a></li>
+                                        <ul>
+                                            <li class="w-icon active"><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
+                                            <li class="quick-view"><a href="{{route('Front.index.archive',$product->id)}}"> Quick View</a></li>
 
-                                </ul>
-                            </div>
-                            <div class="pi-text">
-                                <div class="catagory-name">{{$product->category['name']}}</div>
-                                <a href="{{route('Front.index.archive',$product->id)}}">
-                                    <h5>{{$product->name}}</h5>
-                                </a>
-                                <div class="product-price">
-                                    {{$product->price}}$
+                                        </ul>
+                                    </div>
+                                    <div class="pi-text">
+                                        <div class="catagory-name">{{$product->category['name']}}</div>
+                                        <a href="{{route('Front.index.archive',$product->id)}}">
+                                            <h5>{{$product->name}}</h5>
+                                        </a>
+                                        <div class="product-price">
+                                            {{$product->price}}$
 
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
                             @endif
                         @endforeach
 
