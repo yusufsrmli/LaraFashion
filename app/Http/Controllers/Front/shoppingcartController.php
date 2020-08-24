@@ -16,14 +16,20 @@ class shoppingcartController extends Controller
        return view('Front.shoppingCart');
    }
 
-   public function add(Request $request,$user)
+   public function add($id,Request $request)
    {
-       foreach ($request -> products as $key_products => $product)
+    /*   foreach ($request -> products as $key_products => $product)
        {
            $basket = new shopping_cart();
            $basket -> product_id = $product -> id;
            $basket -> user_id = $user -> id;
-       }
+       }*/
+
+       $basket = new shopping_cart();
+       $basket->product_id=$id;
+       $basket->user_id =$request->user()->id;
+
+       $basket->save();
        return view('Front.shoppingCart');
    }
 }

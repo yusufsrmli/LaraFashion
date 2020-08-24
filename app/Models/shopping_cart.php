@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class shopping_cart extends Model
 {
-    use SoftDeletes;
+   
 
     public $timestamps = true ;
 

@@ -24,7 +24,7 @@
                             <td class="cart-title first-row">
                                 <h5>#</h5>
                             </td>
-                            <td class="p-price first-row" id="price">$}</td>
+                            <td class="p-price first-row" id="price">$</td>
                             <td class="qua-col first-row">
                                 <div class="quantity">
                                     <div class="pro-qty">
