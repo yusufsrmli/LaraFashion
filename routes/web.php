@@ -26,7 +26,8 @@ Route::post('/search','Front\searchController@search')->name('Front.search');
 
 Route::group(['prefix'=>'shoppingcart'],function (){
    Route::get('/view','Front\shoppingcartController@index')->name('Front.shoppingcart');
-   Route::get('/add/{id}','Front\shoppingcartController@add')->name('Front.add_shoppingcart');
+   Route::get('/add/','Front\shoppingcartController@add')->name('Front.add_shoppingcart');
+//    Route::post('/add','Front\shoppingcartController@add')->name('Front.add_shoppingcart');
 
 
 });

@@ -8,6 +8,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Fashi | Template</title>
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+
+    <!-- Bootstrap -->
+    <link href="{{asset('CMS/vendors/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="{{asset('CMS/vendors/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="{{asset('CMS/vendors/nprogress/nprogress.css')}}" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="{{asset('CMS/vendors/iCheck/skins/flat/green.css')}}" rel="stylesheet">
+    <!-- bootstrap-progressbar -->
+    <link href="{{asset('CMS/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css')}}" rel="stylesheet">
+    <!-- JQVMap -->
+    <link href="{{asset('CMS/vendors/jqvmap/dist/jqvmap.min.css')}}" rel="stylesheet">
+    <!-- bootstrap-daterangepicker -->
+    <link href="{{asset('CMS/vendors/bootstrap-daterangepicker/daterangepicker.css')}}" rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="{{asset('CMS/build/css/custom.min.css')}}" rel="stylesheet">
+
+
+
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
@@ -47,8 +68,20 @@
                 </div>
             </div>
             <div class="ht-right">
-                <a href="#" class="login-panel"><i class="fa fa-user"></i>Login</a>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="">
+                        <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            {{Illuminate\Support\Facades\Auth::user()->name}}
+                            <span class=" fa fa-angle-down"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-usermenu pull-right">
 
+
+
+                            <li><a href="{{route('log_out')}}"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -236,6 +269,50 @@
 <script src="{{asset('Front/js/jquery.slicknav.js')}}"></script>
 <script src="{{asset('Front/js/owl.carousel.min.js')}}"></script>
 <script src="{{asset('Front/js/main.js')}}"></script>
+
+
+
+<!-- jQuery -->
+<script src="{{asset('CMS/vendors/jquery/dist/jquery.min.js')}}"></script>
+<!-- Bootstrap -->
+<script src="{{asset('CMS/vendors/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+<!-- FastClick -->
+<script src="{{asset('CMS/vendors/fastclick/lib/fastclick.js')}}"></script>
+<!-- NProgress -->
+<script src="{{asset('CMS/vendors/nprogress/nprogress.js')}}"></script>
+<!-- Chart.js -->
+<script src="{{asset('CMS/vendors/Chart.js/dist/Chart.min.js')}}"></script>
+<!-- gauge.js -->
+<script src="{{asset('CMS/vendors/gauge.js/dist/gauge.min.js')}}"></script>
+<!-- bootstrap-progressbar -->
+<script src="{{asset('CMS/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js')}}"></script>
+<!-- iCheck -->
+<script src="{{asset('CMS/vendors/iCheck/icheck.min.js')}}"></script>
+<!-- Skycons -->
+<script src="{{asset('CMS/vendors/skycons/skycons.js')}}"></script>
+<!-- Flot -->
+<script src="{{asset('CMS/vendors/Flot/jquery.flot.js')}}"></script>
+<script src="{{asset('CMS/vendors/Flot/jquery.flot.pie.js')}}"></script>
+<script src="{{asset('CMS/vendors/Flot/jquery.flot.time.js')}}"></script>
+<script src="{{asset('CMS/vendors/Flot/jquery.flot.stack.js')}}"></script>
+<script src="{{asset('CMS/vendors/Flot/jquery.flot.resize.js')}}"></script>
+<!-- Flot plugins -->
+<script src="{{asset('CMS/vendors/flot.orderbars/js/jquery.flot.orderBars.js')}}"></script>
+<script src="{{asset('CMS/vendors/flot-spline/js/jquery.flot.spline.min.js')}}"></script>
+<script src="{{asset('CMS/vendors/flot.curvedlines/curvedLines.js')}}"></script>
+<!-- DateJS -->
+<script src="{{asset('CMS/vendors/DateJS/build/date.js')}}"></script>
+<!-- JQVMap -->
+<script src="{{asset('CMS/vendors/jqvmap/dist/jquery.vmap.js')}}"></script>
+<script src="{{asset('CMS/vendors/jqvmap/dist/maps/jquery.vmap.world.js')}}"></script>
+<script src="{{asset('CMS/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js')}}"></script>
+<!-- bootstrap-daterangepicker -->
+<script src="{{asset('CMS/vendors/moment/min/moment.min.js')}}"></script>
+<script src="{{asset('CMS/vendors/bootstrap-daterangepicker/daterangepicker.js')}}"></script>
+<!-- Custom Theme Scripts -->
+<script src="{{asset('CMS/build/js/custom.min.js')}}"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 
 </html>

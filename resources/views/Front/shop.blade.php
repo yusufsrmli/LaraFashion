@@ -145,7 +145,7 @@
                                         <img style="height: 200px" src="{{asset('images/news/' . \App\Models\Product::find($product->id)->image)}}" alt="">
 
                                         <ul>
-                                            <li class="w-icon active"><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
+                                            <li class="w-icon active"><a href="{{route('Front.add_shoppingcart',$product->id)}}"><i class="fa fa-shopping-bag"></i></a></li>
                                             <li class="quick-view" ><a href="{{route('Front.index.archive',$product->id)}}">+ Quick View</a></li>
                                         </ul>
                                     </div>
