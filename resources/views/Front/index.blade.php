@@ -105,7 +105,7 @@
 
 
                                     <ul>
-                                        <li class="w-icon active"><i class="fa fa-shopping-bag"><input type="button" name="id" value="{{$product->id}}" class="submit"/> {{--<a href="{{route('Front.add_shoppingcart',$product->id)}}">--}}{{----}}</i></li>
+                                        <li class="w-icon active"><a onclick="add_basket({{$product -> id}})" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true"><i class="fa fa-shopping-bag"></i></a></li> {{--<a href="{{route('Front.add_shoppingcart',$product->id)}}">--}}{{----}}</i></li>
                                         <li class="quick-view"><a href="{{route('Front.index.archive',$product->id)}}"> Quick View</a></li>
 
                                     </ul>

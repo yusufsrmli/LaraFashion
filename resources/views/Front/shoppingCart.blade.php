@@ -12,7 +12,7 @@
                             <th>Image</th>
                             <th class="p-name">Product Name</th>
                             <th>Price</th>
-                            <th>Quantity</th>
+                            <th></th>
                             <th>Total</th>
                             <th><i class="ti-close"></i></th>
                         </tr>
@@ -26,20 +26,9 @@
                             </td>
                             <td class="p-price first-row" id="price">$</td>
                             <td class="qua-col first-row">
-                                <div class="quantity">
-                                    <div class="pro-qty">
-                                        <input type="text" value="1" id="plus">
-                                    </div>
-                                </div>
+
                             </td>
-                            <script>
-                                function multiplyBy()
-                                {
-                                    num1 = document.getElementById("price").value;
-                                    num2 = document.getElementById("plus").value;
-                                    document.getElementById("result").innerHTML = num1 * num2;
-                                }
-                            </script>
+
                             <td class="total-price first-row" id="result">$</td>
                             <td class="close-td first-row"><i class="ti-close"></i></td>
                         </tr>

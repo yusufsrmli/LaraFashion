@@ -68,20 +68,7 @@
                 </div>
             </div>
             <div class="ht-right">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="">
-                        <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                            {{Illuminate\Support\Facades\Auth::user()->name}}
-                            <span class=" fa fa-angle-down"></span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-usermenu pull-right">
-
-
-
-                            <li><a href="{{route('log_out')}}"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
-                        </ul>
-                    </li>
-                </ul>
+                <a href="{{route('login')}}" class="login-panel"><i class="fa fa-user"></i>Login</a>
             </div>
         </div>
     </div>
@@ -110,50 +97,11 @@
 
                         <li class="cart-icon"><a href="{{route('Front.shoppingcart')}}">
                                 <i class="fa fa-shopping-bag"></i>
-                                <span>3</span>
+
                             </a>
-                            <div class="cart-hover">
-                                <div class="select-items">
-                                    <table>
-                                        <tbody>
-                                        <tr>
-                                            <td class="si-pic"><img src="img/select-product-1.jpg" alt=""></td>
-                                            <td class="si-text">
-                                                <div class="product-selected">
-                                                    <p>$60.00 x 1</p>
-                                                    <h6>Kabino Bedside Table</h6>
-                                                </div>
-                                            </td>
-                                            <td class="si-close">
-                                                <i class="ti-close"></i>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="si-pic"><img src="img/select-product-2.jpg" alt=""></td>
-                                            <td class="si-text">
-                                                <div class="product-selected">
-                                                    <p>$60.00 x 1</p>
-                                                    <h6>Kabino Bedside Table</h6>
-                                                </div>
-                                            </td>
-                                            <td class="si-close">
-                                                <i class="ti-close"></i>
-                                            </td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="select-total">
-                                    <span>total:</span>
-                                    <h5>$120.00</h5>
-                                </div>
-                                <div class="select-button">
-                                    <a href="#" class="primary-btn view-card">VIEW CARD</a>
-                                    <a href="#" class="primary-btn checkout-btn">CHECK OUT</a>
-                                </div>
-                            </div>
+
                         </li>
-                        <li class="cart-price">$150.00</li>
+                        <li class="cart-price"></li>
                     </ul>
                 </div>
             </div>
@@ -166,8 +114,7 @@
                 <ul>
                     <li><a href="{{route('Front.index')}}">Home</a></li>
                     <li><a href="{{route('Front.shop')}}">Shop</a></li>
-                    <li><a href="#">Women's</a></li>
-                    <li><a href="#">Men's</a></li>
+                   
                     <li><a href="./contact.html">Contact</a></li>
 
                 </ul>
